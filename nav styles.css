@@ -1,0 +1,184 @@
+ul{
+  margin: 10 px;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  background-color:#333;
+}
+
+li{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+
+li a{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+}
+
+li{
+	float:center;
+}
+
+li a, .dropbtn{
+	display:inline-block;
+	color:white;
+	text-align:center;
+	padding:16px 16px;
+	text-decoration:none;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size:16px;
+}
+
+li a:hover, .dropdown:hover, li.active a{
+  color:#FFF;
+  background-color:#FD5331;
+}{
+	background-color:red;
+}
+
+li, .dropdown{
+	display:inline-block;
+}
+
+
+
+.dropdown-content{
+	display:none;
+	position:absolute;
+	background-color:#F9F9F9;
+	min-width:160px;
+	box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2)
+  text-align:left;
+	z-index:1;
+}
+
+.dropdown-content a{
+	color:black;
+	padding:16px 16px;
+	text-decoration:none;
+	display:block;
+	text-align:left;
+}
+
+.dropdown-content a:hover{
+	background-color:#F1F1F1;
+}
+
+.dropdown:hover .dropdown-content{
+	display:block;
+}
+
+.content2 {
+ width: 450px;
+ height: auto;
+ top:10px;
+ bottom: 10px;
+ background: #ffffff;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+ padding-top: 10px;
+ -moz-border-radius: 0px;
+ -webkit-border-radius: 0px;
+ border-radius: 0px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ float: left;
+ /*box-shadow: 7px 7px 10px #000000*/;
+}
+
+.content4 {
+ width: 400px;
+ height: auto;
+ background: #333;
+ color: white;
+ font-family: Berlin Sans FB;
+ text-align: left;
+ padding-left: 35px;
+ padding-right: 15px;
+ padding-bottom: 15px;
+ padding-top: 15px;
+ -moz-border-radius: 20px;
+ -webkit-border-radius: 20px;
+ border-radius: 5px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ float: right;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: #F1F1F1;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #555 transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #555;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #F1F1F1;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+

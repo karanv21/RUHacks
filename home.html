@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>Dashboard</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" type="text/css" href="nav styles.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+<body>
+<h1>Peer Support Program</h1>
+<div class="sticky">
+<ul>
+<li class="active"><a href="home.html">Home</a></li>
+<li><a href="Dashboard.html">Dashboard</a></li>
+<li><a href="tell.html">Tell us about yourself</a></li>
+<!--<li><a href="contact">How can we help?</a></li>
+<li><a href="index_2.html">What can you help with?</a></li>-->
+<li><a href="resources.html">Resources</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li class="dropdown">
+	<a href="javascript:void(0)" class="dropbtn">Profile</a>
+	<div class="dropdown-content">
+		<a href="ratings.html">Ratings</a>
+		<a href="comments.html">Comments</a>
+		<a href="privacy_settings.html">Privacy Settings</a>
+	</div></li>
+	</ul></div>
+
+	
+
+	<h2>Explore</h2>
+
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names, resources, ..." title="Type in a name">
+
+	<ol id="myUL">
+	  <li><a href="#">Adele</a></li>
+	  <li><a href="#">Agnes</a></li>
+
+	  <li><a href="#">Depression Books</a></li>
+	  <li><a href="#">Self Developement</a></li>
+
+	  <li><a href="#">Calvin</a></li>
+	  <li><a href="#">Christina</a></li>
+	  <li><a href="#">Best practices</a></li>
+		<li><a href="#">Videos</a></li>
+	</ol>
+
+	<script>
+	function myFunction() {
+	    var input, filter, ul, li, a, i, txtValue;
+	    input = document.getElementById("myInput");
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("myUL");
+	    li = ul.getElementsByTagName("li");
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        txtValue = a.textContent || a.innerText;
+	        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
+	}
+	</script>
+
+</body>
+</html>
+
+

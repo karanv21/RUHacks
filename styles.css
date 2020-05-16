@@ -1,0 +1,261 @@
+h1{
+	font-family: Gill sans, Gill Sans ML, MyriaDd Pro, DejaVu Sans Condensed, Helvetica, Arial, "sans serif";
+	font-size:xx-large;
+	color:#FF0000;
+	font-weight:100;
+	font-style:normal;
+	text-align:center;
+}
+
+body{
+	margin:0px 150px;
+}
+
+p{
+	font-family: Gill sans, Gill Sans ML, MyriaDd Pro, DejaVu Sans Condensed, Helvetica, Arial, "sans serif";
+	font-size:medium;
+	font-style:italic;
+	text-align:left;
+	color:white;
+}
+
+h2{
+	font-family: Gill sans, Gill Sans ML, MyriaDd Pro, DejaVu Sans Condensed, Helvetica, Arial, "sans serif";
+	font-size:x-large;
+	font-style:italic;
+	text-align:center;
+	color:#555;
+}
+
+h3{
+	font-family: Gill sans, Gill Sans ML, MyriaDd Pro, DejaVu Sans Condensed, Helvetica, Arial, "sans serif";
+	font-size:medium;
+	font-style:italic;
+	text-align:left;
+	color:#FF0000;
+}
+
+body{
+	background-color:#ffffff;
+}
+
+h6{
+	font-family: Gill sans, Gill Sans ML, MyriaDd Pro, DejaVu Sans Condensed, Helvetica, Arial, "sans serif";
+	font-size:medium;
+	font-style:italic;
+	text-align:center;
+	color:#808080;
+	margin-left:60px;
+}
+
+h5{
+	text-align: center;
+}
+
+video{
+	float:inherit;
+}
+
+.sticky {
+	 	/*css for  stickey navbar*/
+    position: sticky;
+		top: 0;
+    z-index: 100;
+}
+
+.button{
+	background-color:#FF0000;
+	border:none;
+	color:white;
+	padding:15px 32px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:16px;
+}
+
+.button1{
+	background-color:#FF0000;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('images/DROGON.gif');
+		filter: blur(0px);
+
+    /* Full height */
+    height: 376px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.parallax {
+        background-attachment: scroll;
+    }
+(Optional if u dont want to scroll the picture)*/
+
+.slider{
+	width: 640px; /*Same as width of the large image*/
+	position: relative;
+	/*Instead of height we will use padding*/
+	padding-top: 360px; /*That helps bring the labels down*/
+
+	margin:auto;
+  margin-left: 360px;
+	/*Lets add a shadow*/
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+	width:640px;
+	height:360px;
+}
+
+.slider input[name='slide_switch'] {
+	display: none;
+}
+
+.slider label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 18px 0 0 18px;
+	border: 3px solid #999;
+
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	width:100px;
+	height:70px
+
+	/*Default style = low opacity*/
+	opacity: 0.6;
+}
+
+.slider label img{
+	display:inline-block;
+	height:70px;
+	width:100px;
+}
+
+/*Time to add the click effects*/
+.slider input[name='slide_switch']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider input[name='slide_switch'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider input[name='slide_switch']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
+
+/*We are done :)*/
+
+
+#myInput {
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+
+#myUL {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#myUL li a {
+	border: 1px solid #ddd;
+	margin-top: -1px; /* Prevent double borders */
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block
+}
+
+#myUL li a:hover:not(.header) {
+	background-color: #eee;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
