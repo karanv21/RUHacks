@@ -1,0 +1,113 @@
+/*--CONTACT-page--*/
+.contact-bg{
+background:url(../images/rooms.jpg) repeat-y 0px 0px;
+background-size:cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+padding-bottom: 6em;
+}
+.contact-us{
+	padding: 4% 0;
+}
+.contact-us_left {
+	float:left;
+	margin-right:3.3333%;
+	width: 32.3333%;
+}
+.contact_right {
+	float:left;
+	width: 63.3333%;
+}
+.contact-us_left h3{
+	margin-bottom: 2%;
+}
+.company_address{
+	padding-top:10px;
+}
+.company_address p{
+	color: #242424;
+	text-shadow: 0 1px 0 #ffffff;
+	line-height: 1.8em;
+	font-size: 0.8125em;
+	font-weight: 600;
+}
+.company_address p a{
+	color: #FD5331;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	text-shadow: 0 1px 0 #ffffff;
+}
+.company_address p a:hover{
+	color: #242424;
+}
+.map{
+	margin: 6% 0 4%;
+}
+.contact_right h3{
+	margin-bottom: 2%;
+	font-size:2.1em;
+	text-transform:uppercase;
+}
+.contact-form div{
+	padding:5px 0;
+}
+.contact-form p{
+	display: block;
+	color: #4A4A4A;
+	font-weight:600;
+	line-height: 1.5em;
+	font-size: 0.9em;
+}
+.contact-form input[type="text"],.contact-form textarea{
+	font-family: 'Open Sans', sans-serif;
+	margin-top: 5px;
+	padding: 10px;
+	display: block;
+	width: 98%;
+	background: transparent;
+	outline: none;
+	color: #555555;
+	font-size: 1em;
+	border:1px solid #2A2E33;
+	-webkit-appearance: none;
+}
+.contact-form input[type="text"]:hover,.contact-form textarea:hover{
+border:1px solid #FD5331;
+-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.contact-form textarea{
+	resize:none;
+	height:120px;		
+}
+.contact-form input[type="submit"]{
+	margin-top: 10px;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	background: #242424;
+	border: 1px solid #242424;
+	padding: 10px 24px;
+	outline: none;
+	color: #ffffff;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	-webkit-appearance: none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+}
+.contact-form input[type="submit"]:hover{
+	background: #FD5331;
+	border: 1px solid #FD5331;
+}
