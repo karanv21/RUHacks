@@ -6,7 +6,7 @@ ul{
   line-height: 1;
   display: block;
   position: relative;
-  background-color:#333;
+  background-color:#00a893;
 }
 
 li{
@@ -45,9 +45,8 @@ li a, .dropbtn{
 
 li a:hover, .dropdown:hover, li.active a{
   color:#FFF;
-  background-color:#FD5331;
-}{
-	background-color:red;
+  background-color:#ff6666;
+
 }
 
 li, .dropdown{
@@ -88,7 +87,7 @@ li, .dropdown{
  height: auto;
  top:10px;
  bottom: 10px;
- background: #ffffff;
+ background: #ffcccc;
  padding-left: 10px;
  padding-right: 10px;
  padding-bottom: 10px;
@@ -106,7 +105,7 @@ li, .dropdown{
 .content4 {
  width: 400px;
  height: auto;
- background: #333;
+ background: #666666;
  color: white;
  font-family: Berlin Sans FB;
  text-align: left;
@@ -223,5 +222,3 @@ li, .dropdown{
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
-
