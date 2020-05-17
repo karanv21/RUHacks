@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome</title>
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="nav styles.css">
+  <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background-color:#ffcccc">
+  <h1 id="r_header">Registration Page</h1>
+  <form id="registration">
+  <div class="form-group">
+    <label for="exampleInputEmail1">First Name</label>
+    <input id="firstName" type="text" class="form-control" aria-describedby="emailHelp">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Last Name</label>
+    <input type="text" class="form-control" id="lastName" aria-describedby="emailHelp">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="inputPassword">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Repeat Password</label>
+    <input type="password" class="form-control" id="inputRepeatPassword">
+  </div>
+
+<div class="subButton">
+  <button id="submitButton" type="button" class="btn btn-primary" onclick="window.location.href = 'dashboard.html';">Submit</button>
+</div>
+
+</form>
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script  src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script  src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+  <!-- JavaScript -->
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDPRzW7DbMkRTEY_LOvZR5iewZBmisFQ2I",
+      authDomain: "ruhacks-6a4bf.firebaseapp.com",
+      databaseURL: "https://ruhacks-6a4bf.firebaseio.com",
+      projectId: "ruhacks-6a4bf",
+      storageBucket: "ruhacks-6a4bf.appspot.com",
+      messagingSenderId: "877156303034",
+      appId: "1:877156303034:web:4665d49dea612e2761c283"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    var firestore = firebase.firestore();
+
+    const docRef = firestore.doc("sample/testData");
+    const inputFirstName = document.getElementById("firstName");
+    const inputLastName = document.getElementById("lastName");
+    const userEmail = document.getElementById("inputEmail");
+
+    const passwordTry1 = document.getElementById("inputPassword");
+
+    const submit = document.getElementById("submitButton");
+
+    submit.addEventListener("click", function() {
+      const textToSave = inputFirstName.value + inputLastName.value;
+      const emailUser = userEmail.value;
+      console.log("Saving "+textToSave + " to the DB");
+      docRef.set({
+        name: textToSave,
+        email: emailUser
+
+      }).then(function(){
+        console.log("Saved!");
+      }).catch(function(error){
+        console.log("Error lmao", error);
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

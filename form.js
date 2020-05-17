@@ -1,4 +1,4 @@
-
+  //var failureCondition=false;
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyDPRzW7DbMkRTEY_LOvZR5iewZBmisFQ2I",
@@ -14,15 +14,23 @@
 
   const auth = firebase.auth();
 
+
 function signUp(){
   var email = document.getElementById("email");
   var password = document.getElementById("password");
 
   const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
 
+  //promise.catch(failureCondition=true);
   promise.catch(e=>alert(e.message));
 
-  alert("Signed Up");
+  //if(failureCondition){
+    //dontvisitDashboard();
+ // }else{
+    alert("Signed Up");
+    visitDashboard();
+  //}
+  
 }
 
 function signIn() {
@@ -31,11 +39,38 @@ function signIn() {
 
   const promise = auth.signInWithEmailAndPassword(email.value, password.value);
 
-  promise.catch(e=>alert(e.message)); //take them to
+   //take them to
+
+  //promise.catch(failureCondition=true);
+  promise.catch(e=>alert(e.message));
+  //if(failureCondition){
+  //  dontvisitHome();
+  //}else{
+    alert("Signed In");
+    visitHome();
+  //}
 
   // alert("Signed In" + email.value);
 
   //Take user to a different home page
+}
+
+
+function visitHome() {
+  window.location='home.html';
+}
+// function dontvisitHome() {
+//   alert("Invalid details");
+//   failureCondition=false;
+// }
+
+// function dontvisitDashboard() {
+//   alert("Invalid credentials");
+//   failureCondition=false;
+// }
+
+function visitDashboard() {
+  window.location='dashboard.html';
 }
 
 function signOut() {

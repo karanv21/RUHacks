@@ -2,15 +2,20 @@
 <html>
   <head>
 
-    <title>Form</title>
+    <title>Login</title>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <script src="form.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="nav styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
   </head>
   <body>
-    <h1> form </h1>
+    <h1> Peer Support Program </h1>
+    <br><br><br><br><br><br>
+    <h1> Sign In </h1>
     <div id="formContainer">
         <div id="header"> </div>
         <input type="email" placeholder="email" id="email"/>
@@ -19,26 +24,54 @@
         <button onclick="signUp()" id="signUp"> Sign Up </button>
         <button onclick="signIn()" id="signIn"> Sign In </button>
         <button onclick="signOut()" id="signOut"> Sign Out </button>
+        <!--<script>
+    //       var firebaseConfig = {
+    //   apiKey: "AIzaSyDPRzW7DbMkRTEY_LOvZR5iewZBmisFQ2I",
+    //   authDomain: "ruhacks-6a4bf.firebaseapp.com",
+    //   databaseURL: "https://ruhacks-6a4bf.firebaseio.com",
+    //   projectId: "ruhacks-6a4bf",
+    //   storageBucket: "ruhacks-6a4bf.appspot.com",
+    //   messagingSenderId: "877156303034",
+    //   appId: "1:877156303034:web:4665d49dea612e2761c283"
+    // };
 
+    // firebase.initializeApp(firebaseConfig);
+    // var firestore = firebase.firestore();
+    // const docRef = firestore.doc("sample/testData");
+    // const inputFirstName = document.getElementById("email");
+    // const passwordTry1 = document.getElementById("password");
+
+
+    // const submit = document.getElementById("signIn");
+
+    // submit.addEventListener("click", function() {
+    //   const textToSave = inputFirstName.value;
+    //   const password1 = passwordTry1.value;
+    //   console.log("Saving "+textToSave + " to the DB");
+    //   docRef.set({
+    //     email: textToSave,
+    //     password: password1
+
+    //   }).then(function(){
+    //     console.log("Saved!");
+    //   }).catch(function(error){
+    //     console.log("Error lmao", error);
+    //   });
+    // });
+//Type a message
+
+        </script>-->
   </body>
 
   <style>
-    body{
-      background-color: #81ecec;
-    }
-    h1{
-      background-color:#ff4d4d;
-      margin: 100px auto;
-      text-align: center;
-      color: white;
-    }
+    
   #formContainer{
     background-color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
-    width: 25%;
-    height: 45%;
-    margin: 10px auto;
+    width: 300px;
+    height: 200px;
+    margin: 10px 250px;
   }
   #header{
     width:100%
@@ -68,39 +101,44 @@
     color:white;
     border: none;
     font-weight: bold;
-    padding: 15px 32px;
+    width:120px;
+    height:40px;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
     margin-top:20px;
-    margin-left:54px;
+    margin-left:28px;
   }
   #signIn{
     background-color: #32ff7e;
     color:white;
     border: none;
     font-weight: bold;
-    padding: 15px 32px;
+    width:120px;
+    height:40px;
     border-radius: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin-top:20px;
+    margin-right:25px;
     font-size: 13px;
   }
   #signOut{
     background-color: #fffa65;
-    color:black;
+    color:white;
     border: none;
-    padding: 10px 32px;
+    width:120px;
+    height:40px;
     border-radius: 10px;
     text-align: center;
+    font-weight: bold;
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
-    margin-top:22px;
-    margin-left:112px;
+    margin: 5px 85px;
   }
 
   button:hover{

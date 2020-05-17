@@ -288,3 +288,20 @@ input[type=submit]:hover {
   padding: 2px 16px;
   background-color: #333;
 }
+
+
+#registration{
+width: 30%;
+margin-left: 35%;
+margin-top: 3%;
+}
+
+#r_header{
+margin-left: 0%;
+margin-top: 10%;
+}
+
+.subButton{
+margin-left: 45%;
+}
+
