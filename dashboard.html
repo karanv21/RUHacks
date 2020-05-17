@@ -15,7 +15,6 @@
 <ul>
 <li><a href="home.html">Home</a></li>
 <li class="active"><a href="Dashboard.html">Dashboard</a></li>
-<li><a href="login.html">User</a></li>
 <!--<li><a href="contact">How can we help?</a></li>
 <li><a href="index_2.html">What can you help with?</a></li>-->
 <li><a href="resources.html">Resources</a></li>
@@ -27,6 +26,7 @@
 		<a href="comments.html">Comments</a>
 		<a href="privacy_settings.html">Privacy Settings</a>
 	</div></li>
+	<li><a href="login.html">User</a></li>
 	</ul></div>
 
 	<div class="content2"><div class="content4">
@@ -195,8 +195,12 @@
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       </div>
     </div>
-    <div class="row">
-      <input type="submit" value="Submit">
+		<div class="subButton">
+		  <button id="submitButton" type="button" class="btn btn-primary" onclick="window.location.href = 'dashboard.html';">Submit</button>
+
+			<script>
+			alert('Saved')
+			</script>
     </div>
   </form>
 </div>
